@@ -9,10 +9,11 @@
 body,
 html {
   height: 100vh;
-  background-color: white;
+  background-color: black;
   font-size: 16px;
   font-family: system-ui, sans-serif, arial;
 }
+
 /* Start Menu Container */
 #startMenuContainer {
   display: flex;
@@ -23,6 +24,7 @@ html {
   color: white;
   text-align: center;
   justify-content: center;
+  position: relative;
 }
 
 /* ASCII Art Title */
@@ -33,7 +35,7 @@ html {
   font-size: 4px;
   line-height: 1; /* Line height to ensure art looks intact */
   color: #39ff14;
-  margin: 10px;
+  margin: 20px;
   overflow-x: auto; /* Allows horizontal scrolling if necessary */
 }
 
