@@ -1,0 +1,59 @@
+/* Universal Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000000e8;
+  color: white;
+}
+#game {
+    width: 600px;
+    height: 500px;
+    border: 5px solid black;
+    background-color: #06b5ff;
+    margin: auto;
+    overflow: hidden;
+}
+#bldg {
+    width: 50px;
+    height: 500px;
+    background-color: black;
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+}
+@keyframes block{
+    0%{left:400px}
+    100%{left:-50px}
+}
+#gap {
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+#player {
+    width: 20px;
+    height: 20px;
+    background-color: #ff06b5;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  body,
+  html {
+    font-size: 14px; /* Smaller font size for mobile devices */
+  }
+}
+@media (max-width: 480px) {
+  #startButton button {
+    padding: 15px 30px; /* Larger padding for easier interaction on mobile devices */
+  }
+}

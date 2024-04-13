@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" onclick="jump()">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cyber City Dash - Game</title>
     <link rel="stylesheet" href="./css/gameScreen-style.css" />
-</head>
-<body>
-    <div id="gameScreen">
-        <!-- Game interface goes here -->
-        <p>Gameplay interface will be developed here.</p>
+  </head>
+  <body>
+    <div id="game">
+      <!-- <canvas id="board" src="./img/city.png"></canvas> -->
+      <div id="bldg"></div>
+      <div id="gap"></div>
+      <div id="player"></div>
     </div>
-    <script src="./js/gameScreenScript.js"></script>
-</body>
+    <script src="./js/script.js" defer></script>
+  </body>
 </html>
