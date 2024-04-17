@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" onclick="jump()">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cyber City Dash - Game</title>
     <link rel="stylesheet" href="./css/gameScreen-style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <div id="game">
-      <!-- <canvas id="board" src="./img/city.png"></canvas> -->
-      <div id="bldg"></div>
-      <div id="gap"></div>
-      <div id="player"></div>
+        <div id="bldg"></div>
+        <div id="gap"></div>
+        <div id="player"></div>
+    </div>
+    <div id="characterContainer">
+        <img src="./img/char.png" alt="Character Image" id="charImage">
+        <img src="./img/charDmg.png" alt="Damaged Ship" id="dmgImage" style="display: none;">
+        <div id="characterText">
+            <p>Alright Choom, all you need to do is clear 20 light rings and we are out of the city and deep into space!</br></br> Good Luck... again don't crash my ship!</p>
+        </div>
+    </div>
+    <div id="gameOver" style="display: none;">
+        Game Over! Your Score: <span id="score"></span>
+        <button onclick="restartGame()">Restart</button>
     </div>
     <script src="./js/script.js" defer></script>
-  </body>
+</body>
 </html>

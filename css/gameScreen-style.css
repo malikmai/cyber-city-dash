@@ -3,46 +3,128 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000000e8;
-  color: white;
+}
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #2c3e50, #33449980);
+  min-height: 100vh;
 }
 #game {
-    width: 600px;
-    height: 500px;
-    border: 5px solid black;
-    background-color: #06b5ff;
-    margin: auto;
-    overflow: hidden;
+  width: 600px;
+  height: 500px;
+  border: 5px solid black;
+  background-color: white;
+  background-image: url("/img/city.png");
+  position: relative;
+  overflow: hidden;
 }
 #bldg {
-    width: 50px;
-    height: 500px;
-    background-color: black;
-    position: relative;
-    left: 400px;
-    animation: block 2s infinite linear;
+  width: 50px;
+  height: 500px;
+  background: #223b8d;
+  position: relative;
+  animation: block 2s infinite linear;
 }
-@keyframes block{
-    0%{left:400px}
-    100%{left:-50px}
+@keyframes block {
+  from {
+    left: 100%;
+  } /* Start outside the right edge */
+  to {
+    left: -50px;
+  } /* Move left beyond the left edge */
 }
+
 #gap {
-    width: 50px;
-    height: 150px;
-    background-color: white;
-    position: relative;
-    left: 400px;
-    top: -500px;
-    animation: block 2s infinite linear;
+  width: 50px;
+  height: 150px;
+  background-color: white;
+  position: relative;
+  left: 400px;
+  top: -500px;
+  animation: block 2s infinite linear;
 }
 #player {
-    width: 20px;
-    height: 20px;
-    background-color: #ff06b5;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 100px;
+  width: 80px;
+  height: 50px;
+  background-image: url("/img/ship.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 225px;
+}
+#gameOver {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  padding: 20px;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace; /* Font style similar to Pokemon games */
+  max-width: 400px; /* Ensures text box doesn't get too wide */
+}
+
+#gameOver button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  color: black;
+  border-radius: 5px;
+}
+#characterContainer {
+  display: flex;
+  margin-top: 20px; /* Space between game box and character container */
+}
+#winScreen {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4caf50; /* A green background to signify winning */
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  padding: 20px;
+  font-size: 24px;
+  font-family: "Courier New", Courier, monospace;
+  max-width: 400px;
+}
+
+#charImage,
+#dmgImage {
+  display: block;
+  width: 150px;
+  height: auto;
+  margin-right: 20px; /* Space between image and text */
+}
+
+#characterText {
+  background-color: black;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  padding: 20px;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  max-width: 400px; /* Ensures text box doesn't get too wide */
 }
 
 /* Media Queries for Responsiveness */

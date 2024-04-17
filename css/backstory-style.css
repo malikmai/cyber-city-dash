@@ -1,10 +1,10 @@
 /* Universal Box Sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  /* Base Reset for Body and HTML */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Base Reset for Body and HTML */
 body,
 html {
   height: 100vh;
@@ -14,59 +14,58 @@ html {
   font-family: system-ui, sans-serif, arial;
 }
 #backstoryScreen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(180deg, #2c3e50, #33449980);
-    color: white;
-    text-align: center;
-    position: relative;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #2c3e50, #33449980);
+  color: white;
+  text-align: center;
+  position: relative;
+}
 #charImage {
-    width: 200px; /* Adjust size as needed */
-    margin: 20px 0;
-    border: 5px solid black;
-    display: flex;
-    justify-content: center;
-  }
+  width: 200px; /* Adjust size as needed */
+  margin: 20px 0;
+  border: 5px solid black;
+  display: flex;
+  justify-content: center;
+}
 
-  #backstoryTextBox {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: black;
-    color: whitesmoke;
-    border: 2px solid whitesmoke;
-    padding: 20px;
-    margin-bottom: 10px;
-    width: 80%;
+#backstoryTextBox {
+  font-family: "Courier New", Courier, monospace;
+  background-color: black;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  padding: 20px;
+  margin-bottom: 10px;
+  width: 80%;
 }
 #continueButton button {
-    padding: 10px 20px;
-    font-size: 16px;
-    min-width: 100px;
-    cursor: pointer;
-    background-color: #06b5ff;
-    color: white;
-    border-radius: 20px;
-    margin-top: 5px;
-    transition: background-color 0.3s ease;
-  }
-  #continueButton button:hover {
-    background-color: #ff06b5;
-  }
+  padding: 10px 20px;
+  font-size: 16px;
+  min-width: 100px;
+  cursor: pointer;
+  background-color: #06b5ff;
+  color: white;
+  border-radius: 20px;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+}
+#continueButton button:hover {
+  background-color: #ff06b5;
+}
 
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    body,
-    html {
-      font-size: 14px; /* Smaller font size for mobile devices */
-    }
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  body,
+  html {
+    font-size: 14px; /* Smaller font size for mobile devices */
   }
-  @media (max-width: 480px) {
-    #startButton button {
-      padding: 15px 30px; /* Larger padding for easier interaction on mobile devices */
-    }
+}
+@media (max-width: 480px) {
+  #startButton button {
+    padding: 15px 30px; /* Larger padding for easier interaction on mobile devices */
   }
-  
+}
