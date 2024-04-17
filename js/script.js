@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let jumpCount = 0;
       let jumpInterval = setInterval(function () {
         var playerTop = parseInt(
-          window.getComputedStyle(player).getPropertyValue("top")
+          window.getComputedStyle(player).getPropertyValue("top") //converts its first argument to a string, parses that string, then returns an integer or NaN
         );
         if (jumpCount < 15 && playerTop > 7) {
           player.style.top = playerTop - 5 + "px"; // Move the player up on jump
